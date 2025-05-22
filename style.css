@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #cfe4ff;
+}
+
+body {
+  background-color: #091624;
+  color: #ffffff;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #cfe4ff;
+  border-bottom: 2px solid #87cefa;
+  padding-bottom: 5px;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #87cefa;
+}
+
+.topo {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  background-image: url('IMG/capa.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.lancamento-container {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.lancamento-container p a,
+.album p a,
+.video-caption a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.lancamento-container p a:hover,
+.album p a:hover,
+.video-caption a:hover {
+  color: #4a69bd;
+  text-decoration: underline;
+}
+
+.lancamento-img {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(113, 191, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lancamento-img:hover,
+.lancamento-img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(193, 234, 255, 0.35);
+  outline: none;
+}
+
+.lancamento-link {
+  color: #a2c0ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.lancamento-link:hover,
+.lancamento-link:focus {
+  color: #4a69bd;
+  text-decoration: underline;
+  outline: none;
+}
+
+.albuns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.album {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.album img {
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.album p {
+  margin-top: 10px;
+}
+
+.album-link {
+  color: #a2c0ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-link:hover,
+.album-link:focus {
+  color: #4a69bd;
+  text-decoration: underline;
+  outline: none;
+}
+
+.video-single {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.video-grid,
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-item iframe,
+.video-grid iframe,
+.video-container iframe {
+  width: 560px;
+  height: 315px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.video-item iframe:hover,
+.video-grid iframe:hover,
+.video-container iframe:hover {
+  transform: scale(1.05);
+}
+
+.video-item p {
+  margin-top: 10px;
+}
+
+.video-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: medium;
+  transition: color 0.3s ease;
+}
+
+.video-item a:hover {
+  color: #4fa3ff;
+}
+
+@media (max-width: 600px) {
+
+  .video-container iframe,
+  .video-grid iframe,
+  .video-item iframe {
+    height: 200px;
+  }
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+a {
+  color: #1e90ff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: rgba(30, 30, 47, 0.5);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #87cefa;
+  transform: scale(1.2);
+}
+
+header {
+  padding: 0;
+  text-align: center;
+}
+.albuns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.album img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.tracklist {
+  display: none;
+  margin-top: 10px;
+}
+
+.tracklist.show {
+  display: block;
+}
+
+
+/* lista de faixas inicialmente escondida */
+.tracklist {
+  display: none;
+  background: rgba(8, 4, 36, 0.562);
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* classe para exibir a lista ao clicar */
+.tracklist.show {
+  display: block;
+}
+h1 {
+    text-transform: capitalize; /* Deixa só a primeira letra de cada palavra maiúscula */
+    font-size: 2em; /* ou o mesmo valor que usou nos outros */
+    color: #cfe4ff; /* ou a cor que está usando */
+    font-weight: 600;
+    border-bottom: 2px solid #87cefa; /* Linha de separação - ajuste a cor se for outra */
+    padding-bottom: 0.5em; /* Espaço entre o texto e a linha */
+    margin-bottom: 1em; /* Espaço abaixo da linha */
+}
+.album .tracklist a {
+    color: white;           /* Texto branco normalmente */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s; /* Suaviza a mudança de cor */
+}
+
+.album .tracklist a:hover {
+    color: #3498db; /* Azul no hover (pode mudar para o tom que quiser) */
+}
+.page-title {
+    margin-top: 60px;  /* Ajuste conforme quiser o espaçamento */
+    text-align: center; /* opcional, para centralizar */
+}
+a {
+    color: white; /* cor normal */
+    text-decoration: none; /* opcional, remove o sublinhado */
+    transition: color 0.3s ease; /* deixa a troca de cor suave */
+}
+
+a:hover {
+    color: #3498db; /* cor no hover, exemplo: azul */
+}
